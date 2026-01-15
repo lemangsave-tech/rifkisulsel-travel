@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RifkiSulsel Travel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>RifkiSulsel Travel</h1>
+    <nav>
+      <a href="index.html" class="active">Beranda</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#reservasi">Reservasi</a>
+      <a href="about.html">About Developer</a>
+    </nav>
+  </header>
+
+  <!-- ==== HERO SLIDER ==== -->
+  <section class="hero-slider">
+    <div class="slide active">
+      <img src="images/malino.jpg" alt="Malino Highlands" />
+      <div class="caption">
+        <h2>Malino Highlands</h2>
+        <p>Nikmati liburan dengan suasana asri nan sejuk bersama keluarga.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/bira.jpg" alt="Pantai Bira" />
+      <div class="caption">
+        <h2>Pantai Bira</h2>
+        <p>Rasakan keindahan pasir putih dan air laut sebening kaca di Bulukumba.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/toraja.jpg" alt="Tana Toraja" />
+      <div class="caption">
+        <h2>Tana Toraja</h2>
+        <p>Menelusuri budaya khas dan panorama pegunungan yang memukau.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/samalona.jpg" alt="Pulau Samalona" />
+      <div class="caption">
+        <h2>Pulau Samalona</h2>
+        <p>Pulau kecil nan indah, sempurna untuk snorkeling dan menikmati matahari.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== TESTIMONI ==== -->
+  <section id="testimoni" class="testimoni">
+    <h2>Testimoni Wisatawan</h2>
+    <div id="testimoni-list"></div>
+
+    <form id="testimoni-form">
+      <input type="text" id="nama" placeholder="Nama kamu" required />
+      <textarea id="pesan" placeholder="Bagikan pengalamanmu..." required></textarea>
+      <button type="submit" class="btn-secondary">Kirim Testimoni</button>
+    </form>
+  </section>
+
+  <!-- ==== RESERVASI ==== -->
+  <section id="reservasi" class="reservasi">
+    <h2>Reservasi Perjalanan</h2>
+    <form id="reservasi-form">
+      <input type="text" id="r-nama" placeholder="Nama Lengkap" required />
+      <input type="date" id="r-tanggal" required />
+      <input type="time" id="r-waktu" required />
+      <button type="submit" class="btn-primary">Kirim ke WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 RifkiSulsel Travel — Jelajahi Sulawesi Selatan Bersama Kami</p>
+  </footer>
+</body>
+</html>

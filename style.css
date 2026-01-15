@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+/* ==== HEADER ==== */
+header {
+  background-color: #007b83;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+}
+
+/* ==== HERO (lama, diganti slider di index) ==== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #00b7c2, #0093a1);
+  color: white;
+}
+
+/* ==== BUTTONS ==== */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007b83;
+}
+
+.btn-secondary {
+  background-color: #00a9b5;
+}
+
+/* ==== SECTIONS ==== */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ==== TESTIMONI & RESERVASI ==== */
+.testimoni form, .reservasi form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #007b83;
+  color: white;
+  margin-top: 50px;
+}
+
+/* ==== ABOUT DEVELOPER ==== */
+.about-dev {
+  text-align: center;
+}
+
+.dev-photo {
+  width: 200px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  color: #007b83;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.ig-link img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+/* ==== DESTINASI PAGE ==== */
+.destinasi {
+  text-align: center;
+}
+
+.destinasi p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.destinasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #007b83;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  color: #444;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ==== HERO SLIDER (versi rapi & proporsional) ==== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 550px;
+  margin: 60px auto 50px; /* center + spasi atas bawah */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: #000; /* biar gak kelihatan putih saat transisi antar slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: brightness(75%);
+}
+
+/* ==== CAPTION (posisi pas dan tidak terpotong) ==== */
+.hero-slider .caption {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 25px 40px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 85%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-slider .caption h2 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.hero-slider .caption p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 320px;
+    margin: 40px auto;
+    border-radius: 15px;
+  }
+
+  .hero-slider .caption {
+    bottom: 20px;
+    padding: 15px 20px;
+  }
+
+  .hero-slider .caption h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-slider .caption p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==== NAVIGASI SLIDER ==== */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-btn.prev {
+  left: 15px;
+}
+
+.nav-btn.next {
+  right: 15px;
+}
+
+/* ==== DOTS (indikator bawah) ==== */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dots .dot.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
